@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--View Group : Bisa menampung banyak View di dalamnya-->
+
+    <!--ViewGroup-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--View-->
+        <!--Gravity : untuk SetUp posisi teks-->
+        <TextView
+            android:textSize="20sp"
+            android:textColor="@color/ungu_binar"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/app_name" />
+
+        <!--android:inputType="textPassword" - muncul bintang-->
+        <!--android:inputType="textEmailAddress" - muncul @-->
+        <!--android:inputType="number" - muncul angka-->
+        <EditText
+            android:autofillHints="emailAddress"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email_hint"
+            android:textColor="@color/ungu_binar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--android:background="@color/ungu_binar"-->
+        <!--android:layout_marginStart="@dimen/default_button_margin"-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_login" />
+
+        <ImageButton
+            android:contentDescription="Image Button"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:text="Male"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="Female"
+                android:checked="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <CheckBox
+            android:checked="true"
+            android:text="Saya menyetujui syarat dan ketentuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:progress="50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:entries="@array/list_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:weightSum="100"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_weight="70"
+                android:backgroundTint="#C616C3"
+                android:text="Button 1"
+                android:layout_width="0dp"
+                android:layout_marginRight="4dp"
+                android:layout_height="wrap_content" />
+
+            <!--android:layout_marginStart="4dp" - Langsung-->
+            <Button
+                android:layout_marginStart="@dimen/default_button_margin"
+                android:layout_weight="30"
+                android:backgroundTint="@color/ungu_binar"
+                android:text="Button 2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:background="@color/ungu_binar"
+            android:layout_height="256dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:minWidth="48dp"
+                android:text="Button" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

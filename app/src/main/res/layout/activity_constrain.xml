@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConstrainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Guide Line-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_header"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/photo_header"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_header"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/photo_header"
+            android:scaleType="centerCrop"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/photo_profile"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_header"
+            app:layout_constraintTop_toTopOf="@id/guideline_header"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/photo_profile"
+            android:scaleType="centerCrop"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <ImageView
+            android:id="@+id/notification_background"
+            app:layout_constraintTop_toBottomOf="@id/guideline_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_baseline_notifications_none_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/photo_profile"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/my_name"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="@string/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:paddingStart="5dp"
+                android:paddingBottom="15dp"
+                android:text="@string/text_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/text_first" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/my_dsc"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textStyle="bold"
+            android:text="@string/text_dsc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tag"
+            app:layout_constraintTop_toBottomOf="@id/my_dsc"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/text_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/binar"
+            app:layout_constraintTop_toBottomOf="@id/tag"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:text="@string/text_binar"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/my_address"
+            app:layout_constraintTop_toBottomOf="@id/binar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:text="@string/text_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/my_fnc"
+            app:layout_constraintTop_toBottomOf="@id/my_address"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textStyle="bold"
+                android:text="@string/text_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingStart="5dp"
+                android:text="@string/text_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/text_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:text="@string/text_connections"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/icon_one"
+            app:layout_constraintTop_toBottomOf="@id/my_fnc"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/logo_ut"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/icon_two"
+            app:layout_constraintEnd_toEndOf="@id/icon_one"
+            app:layout_constraintStart_toEndOf="@id/icon_one"
+            app:layout_constraintTop_toTopOf="@id/icon_one"
+            android:src="@drawable/icon_law"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <TextView
+            android:id="@+id/my_connections"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icon_two"
+            app:layout_constraintTop_toTopOf="@id/icon_two"
+            app:layout_constraintBottom_toBottomOf="@id/icon_two"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/text_mutual"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/message_button"
+            app:layout_constraintTop_toBottomOf="@id/my_connections"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Mssage"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/purple_500"
+            android:background="@drawable/circle_button"
+            android:layout_width="322dp"
+            android:layout_height="wrap_content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

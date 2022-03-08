@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="email_hint">Input Email</string>
+    <string name="text_login">Login</string>
+    <string name="text_name">Maulida Inayatul Rahman</string>
+    <string name="text_dot">.</string>
+    <string name="text_first">1st</string>
+    <string name="text_dsc">Cracking the human brain to make learning as fun as watching Netfilx, as addictive as browsing your Instagram feed</string>
+    <string name="text_tag">Talks about #techforgood and #socialentrepreneurship</string>
+    <string name="text_binar">Binar Academy</string>
+    <string name="text_address">Jakarta, Jakarta, Indonesia</string>
+    <string name="text_number">24,342</string>
+    <string name="text_followers">followers</string>
+    <string name="text_connections">500+ connections</string>
+    <string name="text_mutual">307 mutual connections: Dr. Pratama Persadha, Norman Sasono, and 305 others</string>
+    <string name="text_Message">Massage</string>
+
+    <string-array name="list_spinner">
+        <item>Kucing</item>
+        <item>Marmut</item>
+        <item>Kupu-Kupu</item>
+    </string-array>
+
+</resources>
